@@ -63,6 +63,7 @@ m=int(input(' Enter the board size:'))
 print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
 board1=Board(m,2)
 b=board1.bd()
+print(b)
 print('======================')
 board1.pi()
 print('======================')
@@ -81,8 +82,9 @@ r2=m-2
 p2=b[t2][r2]
 while x==1:
     m1=input('Enter the move of player 1: ')
-    if m1!='R' or m1!='L' or m1!='U' or m1!='D':
-        print('Please enter R,L,U or D !')
+    if m1!='R' and m1!='L' and m1!='U' and m1!='D':
+        print('ILLEGAL!!!Please enter R,L,U or D !')
+        break
     if m1=='R':
         b[t1][r1]=4
         p1=b[t1][r1+1]
@@ -91,7 +93,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player2 is the winner!')
+            break
         r1+=1
     if m1=='L':
         b[t1][r1]=4
@@ -101,7 +104,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player2 is the winner!')
+            break
         r1-=1
     if m1=='U':
         b[t1][r1]=4
@@ -111,7 +115,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player2 is the winner!')
+            break
         t1-=1
     if m1=='D':
         b[t1][r1]=4
@@ -121,12 +126,13 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player2 is the winner!')
+            break
         t1+=1
 #上面第一部分循环的修改过了 还没有改变终止条件
     m2=input('Enter the move of player 2: ')
-    if m2!='R' or m2!='L' or m2!='U' or m2!='D':
-        print('Please enter R,L,U or D !')
+    if m2!='R' and m2!='L' and m2!='U' and m2!='D':
+        print('ILLEGAL!!!Please enter R,L,U or D !')
     if m2=='R':
         b[t2][r2]=4
         p2=b[t2][r2+1]
@@ -135,7 +141,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player1 is the winner!')
+            break
         r2+=1
     if m2=='L':
         b[t2][r2]=4
@@ -145,7 +152,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player1 is the winner!')
+            break
         r2-=1
     if m2=='U':
         b[t2][r2]=4
@@ -155,7 +163,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player1 is the winner!')
+            break
         t2-=1
     if m2=='D':
         b[t2][r2]=4
@@ -165,7 +174,8 @@ while x==1:
             print(b)
         else:
             x=0
-            print('The game is over!')
+            print('The game is over!Player1 is the winner!')
+            break
         t2+=1
 
 
