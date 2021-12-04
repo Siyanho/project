@@ -59,11 +59,16 @@ class Player(Board):
         return self.positionCol
     
 #MAIN
+import sys
 m=int(input(' Enter the board size:'))
-print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
-board1=Board(m,2)
-b=board1.bd()
-print(b)
+if m>3:
+   print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
+   board1=Board(m,2)
+   b=board1.bd()
+   print(b)
+else:
+   print('Create a game board of size m*m (m >3)!!!')
+   sys.exit()
 print('======================')
 board1.pi()
 print('======================')
