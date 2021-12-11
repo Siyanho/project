@@ -1,5 +1,4 @@
 #CLASS1
-import numpy as np
 class Board:
     def __init__(self,size,PlayerNumber):
         self.size=size
