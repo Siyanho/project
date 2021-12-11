@@ -1,6 +1,7 @@
 #MAIN
 from board import Board
-from player import Player
+#from player import Player
+from human import Human
 #define the size of the board
 import sys
 m=int(input(' Enter the board size:'))
@@ -12,16 +13,14 @@ if m>3:
 else:
    print('Create a game board of size m*m (m >3)!!!')
    sys.exit()
-board1=Board(m,2)
-b=board1.bd()
 print('======================')
 board1.pi()
 print('======================')
 print('Method is as following:')
 board1.md()
     
-player1=Player(m,2,1,1,1)
-player2=Player(m,2,2,m-1,m-1)
+player1=Human(m,2,1,1,1)
+player2=Human(m,2,2,m-1,m-1)
 
 x=1
 t1=1
