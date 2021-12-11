@@ -1,8 +1,17 @@
 #MAIN
 from board import Board
 from player import Player
+#define the size of the board
+import sys
 m=int(input(' Enter the board size:'))
-print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
+if m>3:
+   print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
+   board1=Board(m,2)
+   b=board1.bd()
+
+else:
+   print('Create a game board of size m*m (m >3)!!!')
+   sys.exit()
 board1=Board(m,2)
 b=board1.bd()
 print('======================')
