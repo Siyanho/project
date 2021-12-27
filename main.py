@@ -711,9 +711,10 @@ if anwser2=='C':
             while x2==0:
                 m2=computer1.mov()
                 if m2=='R':
-                   b[t2][r2]=4
+                   
                    p2=b[t2][r2+1]
                    if p2!=8 and p2!=1 and p2!=4:
+                       b[t2][r2]=4
                        x2=1
                        print('The computer choose:')
                        print(m2)
@@ -723,9 +724,10 @@ if anwser2=='C':
                    r2+=1
                 
                 if m2=='L':
-                   b[t2][r2]=4
+                   
                    p2=b[t2][r2-1]
                    if p2!=8 and p2!=1 and p2!=4:
+                       b[t2][r2]=4
                        x2=1
                        print('The computer choose:')
                        print(m2)
@@ -734,9 +736,10 @@ if anwser2=='C':
                             print(b[v])
                    r2-=1
                 if m2=='U':
-                   b[t2][r2]=4
+                   
                    p2=b[t2-1][r2]
                    if p2!=8 and p2!=1 and p2!=4:
+                       b[t2][r2]=4
                        x2=1
                        print('The computer choose:')
                        print(m2)
@@ -745,9 +748,10 @@ if anwser2=='C':
                             print(b[v])
                    t2-=1
                 if m2=='D':
-                   b[t2][r2]=4
+                   
                    p2=b[t2+1][r2]
                    if p2!=8 and p2!=1 and p2!=4:
+                       b[t2][r2]=4
                        x2=1
                        print('The computer choose:')
                        print(m2)
