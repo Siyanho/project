@@ -9,7 +9,7 @@ Created on Mon Dec 27 21:05:40 2021
 ## Board
 
 In board.py:
->>class Board:
+>class Board:
 >>   def __init__(self,size,PlayerNumber):
 >>        self.size=size
 >>        self.PlayerNumber=PlayerNumber
