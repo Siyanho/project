@@ -1,8 +1,8 @@
 #CLASS2
-from board import Board
-class Player(Board):
-    def __init__(self,size,PlayerNumber,PlayerID,positionRow,positionCol):
-        super().__init__(size,PlayerNumber)
+
+class Player():
+    def __init__(self,PlayerID,positionRow,positionCol):
+        #super().__init__(size,PlayerNumber)
         self.PlayerID=PlayerID
         self.positionRow=positionRow
         self.positionRow=positionCol
