@@ -733,28 +733,28 @@ if anwser2=='C':
                        for v in range(m):
                             print(b[v])
                    r2-=1
-               if m2=='U':
-                  b[t2][r2]=4
-                  p2=b[t2-1][r2]
-                  if p2!=8 and p2!=1 and p2!=4:
-                      x2=1
-                      print('The computer choose:')
-                      print(m2)
-                      b[t2-1][r2]=2
-                      for v in range(m):
-                           print(b[v])
-                  t2-=1
-               if m2=='D':
-                  b[t2][r2]=4
-                  p2=b[t2+1][r2]
-                  if p2!=8 and p2!=1 and p2!=4:
-                      x2=1
-                      print('The computer choose:')
-                      print(m2)
-                      b[t2+1][r2]=2
-                      for v in range(m):
+                if m2=='U':
+                   b[t2][r2]=4
+                   p2=b[t2-1][r2]
+                   if p2!=8 and p2!=1 and p2!=4:
+                       x2=1
+                       print('The computer choose:')
+                       print(m2)
+                       b[t2-1][r2]=2
+                       for v in range(m):
                             print(b[v])
-                  t2+=1
+                   t2-=1
+                if m2=='D':
+                   b[t2][r2]=4
+                   p2=b[t2+1][r2]
+                   if p2!=8 and p2!=1 and p2!=4:
+                       x2=1
+                       print('The computer choose:')
+                       print(m2)
+                       b[t2+1][r2]=2
+                       for v in range(m):
+                             print(b[v])
+                   t2+=1
         
 
        
