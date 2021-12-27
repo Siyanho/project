@@ -21,9 +21,9 @@ print('======================')
 print('Method is as following:')
 board1.md()
     
-player1=Human(m,2,1,1,1)
-player2=Human(m,2,2,m-1,m-1)
-computer1=Computer(m,2,2,m-1,m-1)
+player1=Human(1,1,1)
+player2=Human(2,m-1,m-1)
+computer1=Computer(2,m-1,m-1)
 
 x=1
 t1=1
