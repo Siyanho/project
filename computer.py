@@ -7,8 +7,8 @@ Created on Sat Dec 11 14:07:53 2021
 from player import Player
 import random
 class Computer(Player):
-    def __init__(self,size,PlayerNumber,PlayerID,positionRow,positionCol):
-        super().__init__(size,PlayerNumber,PlayerID,positionRow,positionCol)
+    def __init__(self,PlayerID,positionRow,positionCol):
+        super().__init__(PlayerID,positionRow,positionCol)
         
         
     def mov(self):
