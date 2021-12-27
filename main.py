@@ -35,8 +35,8 @@ p2=b[t2][r2]
 #choose if wanna move simultaneously
 print('                               ')
 print('===============================')
-print('Please choose your opponent: human or computer?')
-anwser2=input('please enter H or C(Capital letters):')
+print('Please choose your opponent: Human or Computer?')
+anwser2=input('please enter H or C (Capital letters):')
 if anwser2=='H':
     print('Do you wanna move simultaneously?')
     anwser1=input('please enter Y or N:')
@@ -545,7 +545,7 @@ if anwser2=='H':
 
 
 if anwser2=='C':
-      print('Please choose an ordinary or smart computer.') 
+      print('Please choose an Ordinary or Smart computer.') 
       answer3=input('please enter O or S(capital letters):')
       if answer3=='O':
           while x==1:
@@ -707,68 +707,69 @@ if anwser2=='C':
                     break
                 t1+=1
             
-            x2=0
-            while x2==0:
+            
+            if b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4:
+                   x=0
+                   print('The game is over!You are the winner!')
+                   break
+            
+            x2=1
+            while x2==1:
                 m2=computer1.mov()
                 if m2=='R':
-                   
                    p2=b[t2][r2+1]
                    #if p2!=8 and p2!=1 and p2!=4:
                    if p2==0:
                        b[t2][r2]=4
-                       x2=1
+                       x2=0
                        print('The computer choose:')
                        print(m2)
                        b[t2][r2+1]=2
                        for v in range(m):
                             print(b[v])
                        r2+=1
-
-                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4:
-                       x2=1
+                   if (b[t2][r2+1]==8 or b[t2][r2+1]==1 or b[t2][r2+1]==4) and (b[t2+1][r2]==8 or b[t2+1][r2]==1 or b[t2+1][r2]==4) and (b[t2-1][r2]==8 or b[t2-1][r2]==1 or b[t2-1][r2]==4) and (b[t2][r2-1]==8 or b[t2][r2-1]==1 or b[t2][r2-1]==4):
                        x=0
+                       x2=0
                        print('The game is over!You are the winner!')
                        break
-                   
                 
                 if m2=='L':
-                   
                    p2=b[t2][r2-1]
                    if p2!=8 and p2!=1 and p2!=4:
                        b[t2][r2]=4
-                       x2=1
+                       x2=0
                        print('The computer choose:')
                        print(m2)
                        b[t2][r2-1]=2
                        for v in range(m):
                             print(b[v])
                        r2-=1
-                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
+                   if (p2==8 or p2==1 or p2==4) and (b[t2+1][r2]==8 or b[t2+1][r2]==1 or b[t2+1][r2]==4) and (b[t2-1][r2]==8 or b[t2-1][r2]==1 or b[t2-1][r2]==4) and (b[t2][r2+1]==8 or b[t2][r2+1]==1 or b[t2][r2+1]==4):
                        x=0
-                       x2=1
+                       x2=0
                        print('The game is over!You are the winner!')
                        break
                    
                 if m2=='U':
-                   
                    p2=b[t2-1][r2]
                    if p2!=8 and p2!=1 and p2!=4:
                        b[t2][r2]=4
-                       x2=1
+                       x2=0
                        print('The computer choose:')
                        print(m2)
                        b[t2-1][r2]=2
                        for v in range(m):
                             print(b[v])
                        t2-=1
-                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
-                       x=0
-                       x2=1
-                       print('The game is over!You are the winner!')
-                       break
-                   
+ 
+                   if (p2==8 or p2==1 or p2==4) and (b[t2+1][r2]==8 or b[t2+1][r2]==1 or b[t2+1][r2]==4) and (b[t2][r2-1]==8 or b[t2][r2-1]==1 or b[t2][r2-1]==4) and (b[t2][r2+1]==8 or b[t2][r2+1]==1 or b[t2][r2+1]==4):
+                        x=0
+                        x2=0
+                        print('The game is over!You are the winner!')
+                        break
+       
                 if m2=='D':
-                   
                    p2=b[t2+1][r2]
                    if p2!=8 and p2!=1 and p2!=4:
                        b[t2][r2]=4
@@ -779,12 +780,11 @@ if anwser2=='C':
                        for v in range(m):
                              print(b[v])
                        t2+=1
-                   if p2==8 and p2==1 and p2==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
+                   if (p2==8 or p2==1 or p2==4) and (b[t2][r2-1]==8 or b[t2][r2-1]==1 or b[t2][r2-1]==4) and (b[t2-1][r2]==8 or b[t2-1][r2]==1 or b[t2-1][r2]==4) and (b[t2][r2+1]==8 or b[t2][r2+1]==1 or b[t2][r2+1]==4):
                        x=0
-                       x2=1
+                       x2=0
                        print('The game is over!You are the winner!')
                        break
-                   
         
 
        
