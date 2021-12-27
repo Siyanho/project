@@ -4,9 +4,11 @@ Created on Mon Dec 27 21:05:40 2021
 
 @author: admin
 """
-#Part 1: Software Development
+# Part 1: Software Development
+"""
 First of all, I create four classes: board,player,computer,human.
 The class computer and human are two children's classes,and player is the parent class of them.
+"""
 ##board
 In board.py:
 >class Board:
