@@ -561,7 +561,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 r1+=1
             if m1=='L':
@@ -573,7 +573,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 r1-=1
             if m1=='U':
@@ -585,7 +585,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 t1-=1
             if m1=='D':
@@ -597,7 +597,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 t1+=1
         
@@ -613,7 +613,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player1 is the winner!')
+                    print('The game is over!You are the winner!')
                     break
                 r2+=1
             if m2=='L':
@@ -625,7 +625,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player1 is the winner!')
+                    print('The game is over!You are the winner!')
                     break
                 r2-=1
             if m2=='U':
@@ -637,7 +637,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player1 is the winner!')
+                    print('The game is over!You are the winner!')
                     break
                 t2-=1
             if m2=='D':
@@ -649,7 +649,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player1 is the winner!')
+                    print('The game is over!You are the winner!')
                     break
                 t2+=1
 #samrt computer                
@@ -667,7 +667,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 r1+=1
             if m1=='L':
@@ -679,7 +679,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 r1-=1
             if m1=='U':
@@ -691,7 +691,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 t1-=1
             if m1=='D':
@@ -703,7 +703,7 @@ if anwser2=='C':
                         print(b[v])
                 else:
                     x=0
-                    print('The game is over!Player2 is the winner!')
+                    print('The game is over!The computer is the winner!')
                     break
                 t1+=1
             
@@ -713,7 +713,8 @@ if anwser2=='C':
                 if m2=='R':
                    
                    p2=b[t2][r2+1]
-                   if p2!=8 and p2!=1 and p2!=4:
+                   #if p2!=8 and p2!=1 and p2!=4:
+                   if p2==0:
                        b[t2][r2]=4
                        x2=1
                        print('The computer choose:')
@@ -721,7 +722,14 @@ if anwser2=='C':
                        b[t2][r2+1]=2
                        for v in range(m):
                             print(b[v])
-                   r2+=1
+                       r2+=1
+
+                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4:
+                       x2=1
+                       x=0
+                       print('The game is over!You are the winner!')
+                       break
+                   
                 
                 if m2=='L':
                    
@@ -734,7 +742,13 @@ if anwser2=='C':
                        b[t2][r2-1]=2
                        for v in range(m):
                             print(b[v])
-                   r2-=1
+                       r2-=1
+                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
+                       x=0
+                       x2=1
+                       print('The game is over!You are the winner!')
+                       break
+                   
                 if m2=='U':
                    
                    p2=b[t2-1][r2]
@@ -746,7 +760,13 @@ if anwser2=='C':
                        b[t2-1][r2]=2
                        for v in range(m):
                             print(b[v])
-                   t2-=1
+                       t2-=1
+                   if p2==8 and p2==1 and p2==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
+                       x=0
+                       x2=1
+                       print('The game is over!You are the winner!')
+                       break
+                   
                 if m2=='D':
                    
                    p2=b[t2+1][r2]
@@ -758,7 +778,13 @@ if anwser2=='C':
                        b[t2+1][r2]=2
                        for v in range(m):
                              print(b[v])
-                   t2+=1
+                       t2+=1
+                   if p2==8 and p2==1 and p2==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4:
+                       x=0
+                       x2=1
+                       print('The game is over!You are the winner!')
+                       break
+                   
         
 
        
