@@ -9,10 +9,10 @@ Created on Mon Dec 27 21:05:40 2021
 ## Board
 
 In board.py:
->class Board:
->   def __init__(self,size,PlayerNumber):
->        self.size=size
->        self.PlayerNumber=PlayerNumber
+>>class Board:
+>>   def __init__(self,size,PlayerNumber):
+>>        self.size=size
+>>        self.PlayerNumber=PlayerNumber
 
 I gave the panel some properties:size, playernumber.
 I also define some functions, md(),bd() and pi(),to describe the game description, define the panel size, and describe the rules.
@@ -40,7 +40,7 @@ Here is the codes for generate the board:
 ## Player, computer, human
 The class computer and human are two children's classes,and player is the parent class of them.
 In this class I define the player's ID and initial position.
->>class Player():
+>class Player():
      def __init__(self,PlayerID,positionRow,positionCol):
         #super().__init__(size,PlayerNumber)
         self.PlayerID=PlayerID
