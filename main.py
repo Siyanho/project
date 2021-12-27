@@ -2,9 +2,10 @@
 from board import Board
 #from player import Player
 from human import Human
-#define the size of the board
+
 from computer import Computer
 import sys
+#define the size of the board
 m=int(input(' Enter the board size:'))
 if m>3:
    print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
