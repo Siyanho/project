@@ -40,8 +40,8 @@ Here is the codes for generate the board:
 ## Player, computer, human
 The class computer and human are two children's classes,and player is the parent class of them.
 In this class I define the player's ID and initial position.
->class Player():
-    def __init__(self,PlayerID,positionRow,positionCol):
+>>class Player():
+     def __init__(self,PlayerID,positionRow,positionCol):
         #super().__init__(size,PlayerNumber)
         self.PlayerID=PlayerID
         self.positionRow=positionRow
