@@ -118,7 +118,7 @@ The idea of mode selection is: first, let the player choose whether to play with
 
 I'll write the explanations of details in the following codes:
 
-1.Player1 and Player2 move asynchronously:
+### 1.Player1 and Player2 move asynchronously:
 
     '''python
     print('Please choose your opponent: Human or Computer?')
@@ -155,7 +155,7 @@ I'll write the explanations of details in the following codes:
      #When the player chooses to go in another direction, the code is much the same as above, with only a few details changed.
      #Player 2 also has the same codes as Player 1.
     '''
-2.Player1 and Player2 move in synchronously:
+### 2.Player1 and Player2 move in synchronously:
 
     '''python
     #move simultaneously
@@ -195,7 +195,7 @@ I'll write the explanations of details in the following codes:
      #There are 16 possible combinations, all of which are similar to the code above.
     '''
     
-3.Normal computer mode:
+### 3.Normal computer mode:
 
     '''python
     if anwser2=='C':
@@ -240,7 +240,7 @@ I'll write the explanations of details in the following codes:
                   #The other three cases have much the same code
     '''
 
-4.Smart computer module:
+### 4.Smart computer module:
 
 Player 1's movement is the same as before:
 
