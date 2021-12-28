@@ -2,7 +2,6 @@
 from board import Board
 #from player import Player
 from human import Human
-
 from computer import Computer
 import sys
 #define the size of the board
@@ -11,7 +10,7 @@ if m>3:
    print(' Board of size ('+str(m)+'x'+str(m)+') created with default locations:')
    board1=Board(m,2)
    b=board1.bd()
-
+#size>3
 else:
    print('Create a game board of size m*m (m >3)!!!')
    sys.exit()
@@ -33,12 +32,13 @@ t2=m-2
 r2=m-2
 p2=b[t2][r2]
 
-#choose if wanna move simultaneously
+#Choose to play with people or computers
 print('                               ')
 print('===============================')
 print('Please choose your opponent: Human or Computer?')
 anwser2=input('please enter H or C (Capital letters):')
 if anwser2=='H':
+    #choose if wanna move simultaneously
     print('Do you wanna move simultaneously?')
     anwser1=input('please enter Y or N:')
     #Move asynchronously
@@ -544,10 +544,12 @@ if anwser2=='H':
                 t1+=1
                 t2+=1
 
-
+#Play with computer
 if anwser2=='C':
+      print('===========================================')
       print('Please choose an Ordinary or Smart computer.') 
       answer3=input('please enter O or S(capital letters):')
+#Normal computer
       if answer3=='O':
           while x==1:
             m1=input('Enter the move of player 1: ')
@@ -653,7 +655,7 @@ if anwser2=='C':
                     print('The game is over!You are the winner!')
                     break
                 t2+=1
-#samrt computer                
+#Samrt computer                
       if answer3=='S':
           while x==1:
             m1=input('Enter the move of player 1: ')
@@ -708,11 +710,6 @@ if anwser2=='C':
                     break
                 t1+=1
             
-            
-            if b[t2][r2+1]==8 and b[t2][r2+1]==1 and b[t2][r2+1]==4 and b[t2+1][r2]==8 and b[t2+1][r2]==1 and b[t2+1][r2]==4 and b[t2-1][r2]==8 and b[t2-1][r2]==1 and b[t2-1][r2]==4 and b[t2][r2-1]==8 and b[t2][r2-1]==1 and b[t2][r2-1]==4:
-                   x=0
-                   print('The game is over!You are the winner!')
-                   break
             
             x2=1
             while x2==1:
@@ -774,7 +771,7 @@ if anwser2=='C':
                    p2=b[t2+1][r2]
                    if p2!=8 and p2!=1 and p2!=4:
                        b[t2][r2]=4
-                       x2=1
+                       x2=0
                        print('The computer choose:')
                        print(m2)
                        b[t2+1][r2]=2
