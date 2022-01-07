@@ -17,12 +17,16 @@ The board.py, player.py,human.py,computer.py are all classes, and the main.py is
 You can run it in **Spyder**.
 
 ## Part2
-Part2 includes Part2.ipynb.
+Part2 includes:
+* Part2.ipynb
 
 You can run it in **Jupyter Notebook**.
 
 ## Part3
-Part3 includes Part3.ipynb, data.csv.
+Part3 includes:
+* Part3.ipynb
+* data.csv
+* worldmap.html
 
 The collected data saved in data.csv. And you can run Part3.ipynb in **Jupyter Notebook**.
 
@@ -33,3 +37,6 @@ The collected data saved in data.csv. And you can run Part3.ipynb in **Jupyter N
   '''
 
 **Otherwise, you may get different output and conlusion from mine.**
+
+**In Q2, I generated a photo in html format.**
+![image](file:///E:/MSC/SDPA/coursework/worldmap.html)
