@@ -1,12 +1,17 @@
-#CLASS2
+#Part1 Siyan Huo bm21725@bristol.ac.uk
+'''
+define the Player class
+'''
 
+#CLASS2
 class Player():
+    #Defining basic properties
     def __init__(self,PlayerID,positionRow,positionCol):
-        #super().__init__(size,PlayerNumber)
         self.PlayerID=PlayerID
         self.positionRow=positionRow
         self.positionRow=positionCol
-        
+    
+    #Give some basic information about the player
     def pid(self):
         return self.PlayerID
     
