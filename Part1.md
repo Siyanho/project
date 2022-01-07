@@ -17,7 +17,7 @@ In normal computer mode(input 'O'), the computer may run itself into a dead end 
 
 In board.py:
 
-    '''python
+    ''' 
     class Board:
        def __init__(self,size,PlayerNumber):
            self.size=size
@@ -28,7 +28,7 @@ I gave the panel some properties:size, playernumber.
 I also define some functions, md(),bd() and pi(),to describe the game description, define the panel size, and describe the rules.
 Here is the codes for generate the board:
 
-    '''python
+    ''' 
     def bd(self):
             a1=[] #Define an empty list
             for i in range(self.size):
@@ -54,7 +54,7 @@ Here is the codes for generate the board:
 The class computer and human are two children's classes,and player is the parent class of them.
 In this class I define the player's ID and initial position.
 
-    '''python
+    ''' 
     >class Player():
          def __init__(self,PlayerID,positionRow,positionCol):
             #super().__init__(size,PlayerNumber)
@@ -66,7 +66,7 @@ In this class I define the player's ID and initial position.
 The Computer and Human classes inherit directly from Player, so the attributes do the same.
 In particular, in the Computer class, I added a function that randomly moves the computer.
 
-    '''python
+    ''' 
     from player import Player
     import random
     class Computer(Player):
@@ -83,7 +83,7 @@ In particular, in the Computer class, I added a function that randomly moves the
 
 First, import the required libraries and classes:
 
-     '''python
+     ''' 
     from board import Board
     #from player import Player
     from human import Human
@@ -93,7 +93,7 @@ First, import the required libraries and classes:
     '''
 Give the player the right to define the board's size:
 
-    '''python
+    ''' 
     #define the size of the board
     m=int(input(' Enter the board size:'))
     if m>3:
@@ -116,7 +116,7 @@ Give the player the right to define the board's size:
     '''
 Creating player Instances:
 
-    '''python
+    ''' 
     player1=Human(1,1,1)
     player2=Human(2,m-1,m-1)
     computer1=Computer(2,m-1,m-1)
@@ -128,10 +128,15 @@ I'll write the explanations of details in the following codes:
 
 ### 1.Player1 and Player2 move asynchronously:
 
-By default, player 1 moves first and Player 2 moves later. Each time the player moves, the board is updated and outputs the latest board. Whoever gets to the wrong position or dead end first loses.
+By default, player 1 moves first and Player 2 moves later.
+
+Each time the player moves, the board is updated and outputs the latest board. 
+
+Whoever gets to the wrong position or dead end first loses.
+
 In fact, player 2 may be at a disadvantage in this mode.
 
-    '''python
+    ''' 
     print('Please choose your opponent: Human or Computer?')
     anwser2=input('please enter H or C (Capital letters):')
     #if player chooses to play with a human
@@ -169,9 +174,10 @@ In fact, player 2 may be at a disadvantage in this mode.
 ### 2.Player1 and Player2 move in synchronously:
 
 Player 1 and Player 2 can move at the same time, and if they move to the same position (i.e. collide), the game is tied.
+
 The board will not be updated until player 1 and player 2 have both chosen a direction.
 
-    '''python
+    ''' 
     #move simultaneously
         if anwser1=='Y':
             while x==1:
@@ -212,9 +218,10 @@ The board will not be updated until player 1 and player 2 have both chosen a dir
 ### 3.Normal computer mode:
 
 Normal computer models don't calculate which direction is correct, just completely random. 
-So sometimes on the first round, the computer hits the wall!
 
-    '''python
+So sometimes on the first round, the computer hits the wall ! Then game over.
+
+    ''' 
     if anwser2=='C':
           print('Please choose an Ordinary or Smart computer.') 
           answer3=input('please enter O or S(capital letters):')
@@ -260,11 +267,12 @@ So sometimes on the first round, the computer hits the wall!
 ### 4.Smart computer module:
 
 In this mode, the computer automatically calculates which direction is correct.
+
 The computer's choice is still random, but if the computer chooses the wrong one, it automatically corrects it.
 
 Player 1's movement is the same as before:
 
-    '''python
+    ''' 
     #samrt computer                
           if answer3=='S':
               while x==1:
@@ -287,7 +295,7 @@ Player 1's movement is the same as before:
         
 Here are the codes for the smart computer's movement:
 
-    '''python
+    ''' 
                 #X2 =1 is used to control the computer's cycle.
                 #the computer chooses randomly until it finds a path to take; Or winding down a dead end automatically.
                 x2=1
