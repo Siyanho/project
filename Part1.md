@@ -124,8 +124,12 @@ Creating player Instances:
 The idea of mode selection is: first, let the player choose whether to play with people or computers; If he/she chooses to play with people, let he/she choose whether to move asynchronously or simultaneously; If he/she chooses to play with a computer, let he/she choose to play with a regular computer or a smart one.
 
 I'll write the explanations of details in the following codes:
+(You can also see some more explanations of details in py files.)
 
 ### 1.Player1 and Player2 move asynchronously:
+
+By default, player 1 moves first and Player 2 moves later. Each time the player moves, the board is updated and outputs the latest board. Whoever gets to the wrong position or dead end first loses.
+In fact, player 2 may be at a disadvantage in this mode.
 
     '''python
     print('Please choose your opponent: Human or Computer?')
@@ -163,6 +167,9 @@ I'll write the explanations of details in the following codes:
      #Player 2 also has the same codes as Player 1.
     '''
 ### 2.Player1 and Player2 move in synchronously:
+
+Player 1 and Player 2 can move at the same time, and if they move to the same position (i.e. collide), the game is tied.
+The board will not be updated until player 1 and player 2 have both chosen a direction.
 
     '''python
     #move simultaneously
@@ -203,6 +210,9 @@ I'll write the explanations of details in the following codes:
     '''
     
 ### 3.Normal computer mode:
+
+Normal computer models don't calculate which direction is correct, just completely random. 
+So sometimes on the first round, the computer hits the wall!
 
     '''python
     if anwser2=='C':
@@ -248,6 +258,9 @@ I'll write the explanations of details in the following codes:
     '''
 
 ### 4.Smart computer module:
+
+In this mode, the computer automatically calculates which direction is correct.
+The computer's choice is still random, but if the computer chooses the wrong one, it automatically corrects it.
 
 Player 1's movement is the same as before:
 
