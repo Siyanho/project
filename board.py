@@ -1,7 +1,7 @@
 #Part1 Siyan Huo bm21725@bristol.ac.uk
 
 '''
-define the board class
+define the Board class
 '''
 
 #CLASS1
