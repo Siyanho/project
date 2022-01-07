@@ -1,12 +1,12 @@
-# -*- coding: utf-8 -*-
+# Part1 Siyan Huo bm21725@bristol.ac.uk
 """
-Created on Sat Dec 11 14:20:21 2021
-
-@author: admin
+define the Human class
+a subclass of the Player class
 """
 from player import Player
 class Human(Player):
     def __init__(self,PlayerID,positionRow,positionCol):
+        #Inherit player properties
         super().__init__(PlayerID,positionRow,positionCol)
 
         
