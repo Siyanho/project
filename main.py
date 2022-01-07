@@ -1,3 +1,18 @@
+#Part1 Siyan Huo bm21725@bristol.ac.uk
+'''
+The main code of the game.
+
+There are 4 modes,please try each one.
+
+Each time you make a selection, you should enter capital letters!
+
+In normal computer mode, the computer may run itself into a dead end the first time, 
+so you can try a few more times.
+
+When running, please pay attention to the cursor position 
+and do not type numbers or letters into the code!
+'''
+
 #MAIN
 from board import Board
 #from player import Player
@@ -19,11 +34,13 @@ board1.pi()
 print('======================')
 print('Method is as following:')
 board1.md()
-    
+
+#Define the instances  
 player1=Human(1,1,1)
 player2=Human(2,m-1,m-1)
 computer1=Computer(2,m-1,m-1)
 
+#Define the initial positions
 x=1
 t1=1
 r1=1
@@ -37,6 +54,7 @@ print('                               ')
 print('===============================')
 print('Please choose your opponent: Human or Computer?')
 anwser2=input('please enter H or C (Capital letters):')
+#if player chooses to play with a human
 if anwser2=='H':
     #choose if wanna move simultaneously
     print('Do you wanna move simultaneously?')
@@ -47,18 +65,27 @@ if anwser2=='H':
             m1=input('Enter the move of player 1: ')
             if m1!='R' and m1!='L' and m1!='U' and m1!='D':
                 print('Please enter R,L,U or D !')
+            #If the player1 chooses to move right
             if m1=='R':
+                #Update the status of the old position
                 b[t1][r1]=4
                 p1=b[t1][r1+1]
+                #Check to see if the path has been traveled, or if it has collided with another player.
+                #If you are not in the wrong place
                 if p1!=8 and p1!=2 and p1!=4:
+                    #update the status of the new position
                     b[t1][r1+1]=1
+                    #Output the latest board
                     for v in range(m):
                         print(b[v])
+                #If you hit a path you've already taken, or collide with another player, 
+                #you jump out of the loop, announce winner, and the game is over
                 else:
                     x=0
                     print('The game is over!Player2 is the winner!')
                     break
                 r1+=1
+            #When the player chooses to go in another direction, the code is much the same as above, with only a few details changed.
             if m1=='L':
                 b[t1][r1]=4
                 p1=b[t1][r1-1]
@@ -96,6 +123,7 @@ if anwser2=='H':
                     break
                 t1+=1
         
+            #Player 2 also has the same codes as Player 1.
             m2=input('Enter the move of player 2: ')
             if m2!='R' and m2!='L' and m2!='U' and m2!='D':
                 print('Please enter R,L,U or D !')
@@ -148,7 +176,7 @@ if anwser2=='H':
                     break
                 t2+=1
                 
-    #move simultaneously
+#move simultaneously
     if anwser1=='Y':
         while x==1:
              m1=input('Enter the move of player 1: ')
@@ -156,6 +184,7 @@ if anwser2=='H':
              if (m1!='R' and m1!='L' and m1!='U' and m1!='D') or (m2!='R' and m2!='L' and m2!='U' and m2!='D'):
                 print('Please enter R,L,U or D !')
     #1
+    #In the first case, player1 and player2 both choose to go right
              if m1=='R' and m2=='R':
                 b[t1][r1]=4
                 p1=b[t1][r1+1]
@@ -166,6 +195,7 @@ if anwser2=='H':
                     b[t2][r2+1]=2
                     for v in range(m):
                         print(b[v])
+                #Three possible game-ending scenarios:
                 if p1==8 or p1==4:
                     x=0
                     print('The game is over!Player2 is the winner!')
@@ -552,6 +582,7 @@ if anwser2=='C':
 #Normal computer
       if answer3=='O':
           while x==1:
+            #Player1's  movement.
             m1=input('Enter the move of player 1: ')
             if m1!='R' and m1!='L' and m1!='U' and m1!='D':
                 print('Please enter R,L,U or D !')
@@ -603,7 +634,8 @@ if anwser2=='C':
                     print('The game is over!The computer is the winner!')
                     break
                 t1+=1
-        
+        #computer's movement
+        #Call the mov () function in computer.py
             m2=computer1.mov()
             print('The computer choose:')
             print(m2)
@@ -709,8 +741,10 @@ if anwser2=='C':
                     print('The game is over!The computer is the winner!')
                     break
                 t1+=1
-            
-            
+
+#the movement of the smart computer            
+#X2 =1 is used to control the computer's cycle.
+#the computer chooses randomly until it finds a path to take; Or winding down a dead end automatically.            
             x2=1
             while x2==1:
                 m2=computer1.mov()
