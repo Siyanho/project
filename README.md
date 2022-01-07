@@ -40,5 +40,5 @@ The collected data saved in data.csv. And you can run Part3.ipynb in **Jupyter N
 
 **In Q2, I generated a photo in html format.**
 like this：
-![image](https://user-images.githubusercontent.com/95035715/148606284-47f4b99d-1bdb-4c36-99ff-0e950915c897.png)
+![image](https://user-images.githubusercontent.com/95035715/148606742-734cfd98-1a59-496a-acab-fb1f0efefa77.png)
 You can download the worldmap.html in the github, and open it in any browser.
