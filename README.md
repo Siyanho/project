@@ -1,4 +1,7 @@
 # project
+
+Siyan Huo 
+
 ## Part1
 Part1 inlcudes these files:
 * board.py
