@@ -1,10 +1,13 @@
-# -*- coding: utf-8 -*-
+# Part 1: Software Development
 """
 Created on Mon Dec 27 21:05:40 2021
 
-@author: admin
+@author: Siyan Huo bm21725@bristol.ac.uk
 """
-# Part 1: Software Development
+There are 4 modes,please try each one.
+Each time you make a selection, you should enter capital letters!
+In normal computer mode(input 'O'), the computer may run itself into a dead end the first time, so you can try a few more times.
+When running, please pay attention to the cursor position and do not type numbers or letters into the code!
 
 ## board.py
 
